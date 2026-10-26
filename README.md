@@ -2,57 +2,77 @@
 
 
 
-\## Comandos Utilizados
+\## 1. Inicialización del Repositorio
+
+\- Creación de la carpeta del proyecto y navegación a ella.
+
+\- Comando: `git init`
 
 
 
-1\. \*\*Inicialización y Configuración:\*\*
+\## 2. Configuración Inicial
 
-&#x20;  - `mkdir mi-proyecto-web \&\& cd mi-proyecto-web`
+\- Configuración de usuario y correo global:
 
-&#x20;  - `git init`
+&#x20; - `git config --global user.name "Enrique Romero Vargas"`
 
-&#x20;  - `git config --global user.name "Enrique Romero Vargas"`
-
-&#x20;  - `git config --global user.email "enriqueromerovargas2312@alumnos.alborfp.com"`
+&#x20; - `git config --global user.email "enriqueromerovargas2312@alumnos.alborfp.com"`
 
 
 
-2\. \*\*Primer Commit:\*\*
+\## 3. Primer Commit
 
-&#x20;  - `git add index.html`
+\- Creación del archivo `index.html` con la estructura inicial de HTML.
 
-&#x20;  - `git commit -m "Primer commit: Estructura inicial de index.html"`
+\- Inclusión al área de preparación y commit:
 
+&#x20; - `git add index.html`
 
-
-3\. \*\*Gestión de Ramas y Merge:\*\*
-
-&#x20;  - `git checkout -b desarrollo`
-
-&#x20;  - `git merge desarrollo`
+&#x20; - `git commit -m "Primer commit: Estructura inicial de index.html"`
 
 
 
-4\. \*\*Resolución de Conflictos:\*\*
+\## 4. Creación de Ramas
 
-&#x20;  - `git checkout -b nueva-funcionalidad`
+\- Creación y cambio a la rama de trabajo:
 
-&#x20;  - Edición de `index.html` en ramas paralelas.
-
-&#x20;  - Resolución manual de las marcas `<<<<<<<`, `=======`, `>>>>>>>` en `index.html`.
-
-&#x20;  - `git add index.html` y `git commit -m "Resolver conflicto"`
+&#x20; - `git checkout -b desarrollo`
 
 
 
-5\. \*\*Repositorio Remoto:\*\*
+\## 5. Modificación y Merge
 
-&#x20;  - `git remote add origin https://github.com/enriqueromerovargas2312/ejercicio-git-practico.git`
+\- Edición de `index.html` añadiendo un nuevo párrafo en la rama `desarrollo`.
 
-&#x20;  - `git push -u origin main`
+\- Commit de los cambios: `git commit -m "Añadir párrafo adicional en rama desarrollo"`
 
-&#x20;  - `git push -u origin desarrollo`
+\- Cambio a `main` y fusión: `git checkout main` y `git merge desarrollo`
 
-&#x20;  - `git push -u origin nueva-funcionalidad`
+
+
+\## 6. Resolución de Conflictos
+
+\- Creación de la rama `nueva-funcionalidad` y edición de `index.html`.
+
+\- Cambio a `main` y modificación de la misma línea en `index.html`.
+
+\- Ejecución de `git merge nueva-funcionalidad` resultando en un conflicto de fusión.
+
+\- Edición manual del archivo `index.html` para retirar las marcas de conflicto (`<<<<<<<`, `=======`, `>>>>>>>`) manteniendo ambas líneas.
+
+\- Confirmación de la resolución: `git add index.html` y `git commit -m "Resolver conflicto entre main y nueva-funcionalidad"`.
+
+
+
+\## 7. Trabajo con Repositorios Remotos
+
+\- Vinculación con GitHub: `git remote add origin https://github.com/enriqueromerovargas2312/ejercicio-git-practico.git`
+
+\- Subida de todas las ramas:
+
+&#x20; - `git push -u origin main`
+
+&#x20; - `git push -u origin desarrollo`
+
+&#x20; - `git push -u origin nueva-funcionalidad`
 
